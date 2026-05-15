@@ -6,7 +6,7 @@ Quality over quantity. Five great resources beat fifty mediocre ones.
 
 - [Docker docs — Get started](https://docs.docker.com/get-started/) — the canonical entry point.
 - [Dockerfile reference](https://docs.docker.com/reference/dockerfile/) — every instruction explained.
-- [Compose file reference](https://docs.docker.com/reference/compose-file/) — the full v2 spec.
+- [Compose file reference](https://docs.docker.com/reference/compose-file/) — the full Compose Specification.
 - [Networking overview](https://docs.docker.com/engine/network/) — bridge, host, overlay, DNS.
 - [Storage overview](https://docs.docker.com/engine/storage/) — volumes, bind mounts, tmpfs.
 
