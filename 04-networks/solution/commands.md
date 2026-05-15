@@ -17,8 +17,8 @@ docker run -d --name web --network lab-net -p 8080:8080 ch04-web
 curl localhost:8080   # Hit #1
 curl localhost:8080   # Hit #2
 
-# Prove DNS works
-docker exec web ping -c1 redis
+# Prove DNS works (ping from a one-off redis container on the same network — python:3.13-slim has no ping)
+docker run --rm --network lab-net redis:7-alpine ping -c1 web
 
 # Break the dependency
 docker network disconnect lab-net redis

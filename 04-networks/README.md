@@ -20,7 +20,7 @@ Use raw `docker network` and `docker run` commands. Save them in `solution/comma
 ## Success criteria
 - [ ] `docker network ls` shows your custom network.
 - [ ] `curl localhost:8080` increments a counter (hit #1, #2, ...).
-- [ ] `docker exec <flask> ping -c1 redis` resolves and replies.
+- [ ] `docker run --rm --network <net> redis:7-alpine ping -c1 web` resolves and replies (uses the Redis image, which ships `ping` — the Flask image doesn't).
 - [ ] `docker network disconnect <net> <redis>` causes the next request to error.
 
 ## Hints
