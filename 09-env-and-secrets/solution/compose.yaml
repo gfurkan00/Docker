@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    ports:
+      - "${APP_PORT}:${APP_PORT}"     # Compose interpolates from .env
+    env_file:
+      - .env                          # forwarded into the container
+    environment:
+      APP_PORT: "${APP_PORT}"         # also pin APP_PORT explicitly for the app
