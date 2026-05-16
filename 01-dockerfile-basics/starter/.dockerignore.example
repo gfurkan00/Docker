@@ -1,0 +1,2 @@
+# Rename this file to `.dockerignore` and fill it in with patterns
+# that should NOT be copied into the image.

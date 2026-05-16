@@ -1,0 +1,8 @@
+# Python
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Local env files (kept out of git per challenge 09 convention)
+**/.env
+!**/.env.example

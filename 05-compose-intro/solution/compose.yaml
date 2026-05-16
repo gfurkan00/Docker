@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      REDIS_HOST: cache       # service name acts as DNS hostname
+    depends_on:
+      - cache
+
+  cache:
+    image: redis:7-alpine
