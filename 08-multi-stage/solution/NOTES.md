@@ -5,3 +5,4 @@
 - **Alternative: wheels.** Run `pip wheel -w /wheels -r requirements.txt` in the builder, then `pip install --no-index --find-links=/wheels -r requirements.txt` in the runtime. More portable but two pip runs.
 - **`--target=foo` in newer pip versions** is another option, but `--prefix` plays best with `python -m site` paths.
 - **Smaller still?** `python:3.13-slim` → distroless (`gcr.io/distroless/python3-debian12`). No shell, no apt — debugging is harder, so save it for prod-grade images.
+- **Where does the size floor come from?** `python:3.13-slim` itself is ~118 MB. Flask + cryptography add ~18 MB. The multi-stage win is not "tiny image"; it's "no build tools at runtime". For truly tiny images, switch the runtime base to `python:3.13-alpine` (~50 MB total) or distroless (~70 MB total) — at the cost of debugging ergonomics.
