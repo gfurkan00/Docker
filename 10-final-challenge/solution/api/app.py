@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 import os, psycopg, redis, json, uuid
 
 app = Flask(__name__)

@@ -1,4 +1,4 @@
-import os, time, json, psycopg, redis
+import os, json, psycopg, redis
 
 DSN = (
     f"host={os.environ['DB_HOST']} dbname={os.environ['DB_NAME']} "
