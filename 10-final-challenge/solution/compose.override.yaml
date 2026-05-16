@@ -1,0 +1,11 @@
+services:
+  api:
+    volumes:
+      - ./api:/app
+    command: >
+      python -m flask --app app run --host 0.0.0.0 --port 8080 --reload
+
+  worker:
+    volumes:
+      - ./worker:/app
+    # Worker has no reload; just rerun on file change manually.
